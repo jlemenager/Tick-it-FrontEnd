@@ -7,8 +7,23 @@ import './App.css'
 
 function App() {
 
+  const [allConcerts, setAllConcerts] = useState()
+
   return (
-    <div>
+    <div className="big-app">
+
+    <UserContext.Provider
+      value={{
+          allConcerts,
+          setAllConcerts
+      }}
+      >
+        <Concerts/>
+    </UserContext.Provider>
+
+
+
+    <div className="app">
       <header>
         <Header />
       </header>
@@ -21,6 +36,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
+    </div>
     </div>
   )
 }
