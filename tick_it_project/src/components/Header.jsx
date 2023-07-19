@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom'
-
 export default function Header(){
+
     return(
-        <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/concerts'>Concerts</Link>
-            <Link to='/sports'>Sports</Link>
-        </nav>
+        <div>
+            <img src="src/images/logo.png" alt="logo" />
+            <h3>Front Row</h3>
+        </div>
     )
 }
