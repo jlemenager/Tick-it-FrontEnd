@@ -10,16 +10,16 @@ function App() {
   const [allConcerts, setAllConcerts] = useState()
 
   return (
-    <div className="big-app">
+    // <div className="big-app">
 
-    <UserContext.Provider
-      value={{
-          allConcerts,
-          setAllConcerts
-      }}
-      >
-        <Concerts/>
-    </UserContext.Provider>
+    // <UserContext.Provider
+    //   value={{
+    //       allConcerts,
+    //       setAllConcerts
+    //   }}
+    //   >
+    //     <Concerts/>
+    // </UserContext.Provider>
 
 
 
@@ -37,7 +37,7 @@ function App() {
         <Footer />
       </footer>
     </div>
-    </div>
+    // </div>
   )
 }
 
