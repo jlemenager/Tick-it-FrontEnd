@@ -31,4 +31,4 @@ const AllConcerts = () => {
 
 }
 
-export default Concerts
+export default AllConcerts
