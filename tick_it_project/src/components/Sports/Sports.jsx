@@ -15,7 +15,7 @@ export default function Sports(){
     },[])
     return(
         <div className='sports'>
-            {allsports.map(sport=>{
+            {allsports.map(sport=>(
                 <div key={sport.name} className='sport'>
                     <h3>{sport.name}</h3>
                     <h5>{sport.venue}</h5>
@@ -23,7 +23,7 @@ export default function Sports(){
                     <p>{sport.date}</p>
                     <p>{sport.price}</p>
                 </div>
-            })}
+            ))}
         </div>
     )
 }
