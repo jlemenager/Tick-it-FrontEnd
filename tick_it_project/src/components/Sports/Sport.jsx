@@ -1,3 +1,7 @@
+import { useEffect,useContext } from 'react'
+import UserContext from '../../UserContext'
+import axios from 'axios'
+
 export default function Sports(){
 
     const {sport, setSport} = useContext(UserContext)
