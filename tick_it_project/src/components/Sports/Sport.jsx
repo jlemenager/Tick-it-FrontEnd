@@ -11,15 +11,15 @@ export default function Sports(){
             const response = await axios.get()
             setSport(response.data.sport)
         }
-        getSportAPI()
+        // getSportAPI()
     },[])
     return(
         <div className='sportPage'>
-            <h2>{sport.name}</h2>
+            {/* <h2>{sport.name}</h2>
             <h3>{sport.venue}</h3>
             <img src={sport.image_url} alt="sport image" />
             <p>{sport.date}</p>
-            <p>{sport.price}</p>
+            <p>{sport.price}</p> */}
         </div>
     )
 }
