@@ -3,11 +3,17 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import AllConcerts from './components/Music/Concerts'
+import UserContext from './UserContext'
 import './App.css'
 
 function App() {
 
-  const [allConcerts, setAllConcerts] = useState()
+  // const [allConcerts, setAllConcerts] = useState()
+  // const [concert, setConcert] = useState()
+  // const [allSports, setAllSports} = useState()
+  // const [sport, setSport] = useState()
+
 
   return (
     // <div className="big-app">
@@ -15,10 +21,16 @@ function App() {
     // <UserContext.Provider
     //   value={{
     //       allConcerts,
-    //       setAllConcerts
+    //       setAllConcerts,
+            // concert,
+            // setConcert,
+            // allSports,
+            // setAllSports,
+            // sport,
+            // setSport
     //   }}
     //   >
-    //     <Concerts/>
+    //     <AllConcerts/>
     // </UserContext.Provider>
 
 
