@@ -15,8 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(315deg, #0d1d54, #0f2264);
-  background-repeat: round;
+  background-color: #05123C;
+  background-image: url(./images/opt1.png);
+  background-size: cover;
+  background-position: center;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
   place-items: center;
   text-align: center;
   font-family: heebo;
-  color: #DFF8FF;
+  color: #30a5b7;
 }
 
 .app{
@@ -43,24 +45,64 @@ body {
 header{
  top: 0px;
  width: 100%;  
+ height: 8vh;
+}
+.headercont{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.logo{
+  height: 44px;
+  margin: 5px;
+  filter: drop-shadow(0px 0px 3px #000)              
+}
+
+#title{
+  text-shadow: 0px 0px 5px #000;
+  font-family: PT Sans Narrow;
+}
+
+
+/* MAIN */
+
+main{
+  height: 72vh
 }
 
 /* NAV */
 
-h3 {
-  font-family: PT Sans Narrow;
+nav {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 5px #000;
 }
 
+
 a {
-  color: #DFF8FF;
+  color: #30a5b7;
   text-decoration: none;
   padding: 6px;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 5px; 
 }
+
 a:hover {
-  color: #3967AB;
+  color: #DFF8FF;
   font-weight: 200;
 }
 
+
+/* FOOTER */
+
+footer{
+  color: #57606E;
+  height: 10vh; 
+
+}
 
 button {
   border-radius: 8px;
