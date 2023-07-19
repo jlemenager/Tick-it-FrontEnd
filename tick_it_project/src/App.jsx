@@ -45,9 +45,6 @@ function App() {
       <div>
         <Nav />
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div>
     // </div>
   )
