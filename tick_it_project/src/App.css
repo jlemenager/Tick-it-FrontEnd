@@ -73,9 +73,6 @@ header{
 /* MAIN */
 
 main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 80vh
 }
 .main{
@@ -151,5 +148,24 @@ button:focus-visible {
 }
 
 .concert{
-  width: 100%
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.concdetail{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around; 
+
+}
+#artist, #genre, #cdate, .tixprice, .gettix{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
