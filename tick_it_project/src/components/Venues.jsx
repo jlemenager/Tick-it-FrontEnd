@@ -12,7 +12,7 @@ const AllVenues = ({allVenues, setAllVenues}) => {
     useEffect(()=>{
         getVenuesAPI()
       },[])
-    
+
     let navigate = useNavigate()
     const showVenue = (venue) => {
         navigate(`${venue.venue}`)
