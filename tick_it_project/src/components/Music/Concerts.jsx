@@ -14,15 +14,7 @@ const AllConcerts = () => {
         setAllConcerts(concerts)
         console.log(allConcerts)
       }
-    // useEffect(() => {
-    //     const getConcerts = async() => {
-    //         const response = await axios.get()
-    //         setAllConcerts(response.data.title)
-    //         console.log(response)
-    //     }
-    //     getConcerts()
-    // },[])
-
+      
     useEffect(()=>{
         getConcertsAPI()
       },[])
