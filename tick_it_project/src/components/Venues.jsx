@@ -1,11 +1,11 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
-const AllVenues = () => {
+const AllVenues = ({allVenues, setAllVenues}) => {
     
-    const [allVenues, setAllVenues] = useState([])
     const getVenuesAPI = async() => {
-        const response = await axios.get('http://localhost:8000/events')
+        const response = await axios.get('http://localhost:8000/venues')
         setAllVenues(response.data)
       }
 
@@ -13,16 +13,18 @@ const AllVenues = () => {
         getVenuesAPI()
       },[])
 
+    let navigate = useNavigate()
+    const showVenue = (venue) => {
+        navigate(`${venue.venue}`)
+    }
+
     return allVenues ? (
         <div className="event-list">
             {
                 allVenues.map((venue,key) => (
-                    <div key={key} className="concert">
-                        <h2>{venue.title}</h2>
-                        <h2>{venue.artist}</h2>
-                        <h3>{venue.genre}</h3>
-                        <h3>Date: {venue.date}</h3>
-                        <h3>${venue.price}</h3>
+                    <div key={key} onClick={()=>showVenue(venue)} className="concert">
+                        <img src={venue.photo_url} />
+                        <h2>Location Name Here</h2>
                     </div>
                 ))
             }

@@ -9,8 +9,10 @@ import axios from 'axios'
 import './App.css'
 
 function App() {
-
   
+  
+  const [allVenues, setAllVenues] = useState([])
+  const [allSports, setAllSports] = useState([])
   const [concert, setConcert] = useState()
   const [sport, setSport] = useState()
 
@@ -55,13 +57,13 @@ function App() {
         <Header />
       </header>
       <main>
-        <Main />
+        <Main allSports={allSports} setAllSports={setAllSports} allVenues={allVenues} setAllVenues={setAllVenues}/>
       </main>
       <div>
         <Nav />
       </div>
     </div>
-    // </div>
+    </div>
   ) 
 }
 
