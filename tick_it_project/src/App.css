@@ -119,3 +119,16 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Concerts */
+
+.event-list{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  overflow: hidden;
+  height:80vh;
+}
+
+.concert, .sport{
+  background-color: #22258D;
+}

@@ -10,18 +10,17 @@ import './App.css'
 
 function App() {
 
-  const [allConcerts, setAllConcerts] = useState([])
+  
   const [concert, setConcert] = useState()
-  const [allSports, setAllSports] = useState([])
   const [sport, setSport] = useState()
 
-  const getConcertsAPI = async() => {
-    const response = await axios.get('http://localhost:8000/events')
-    setAllConcerts(...allConcerts, response.data[0])
-    // for (let i = 0; i<response.data.length;i++){
-    //   response.data[i].is_concert ? setAllConcerts(...allConcerts, response.data[i]) : console.log('not a concert')
-    // } 
-  }
+  // const getConcertsAPI = async() => {
+  //   const response = await axios.get('http://localhost:8000/events')
+  //   // setAllConcerts(...allConcerts, response.data[0])
+  //   for (let i = 0; i<response.data.length;i++){
+  //     response.data[i].is_concert ? setAllConcerts(...allConcerts, response.data[i]) : console.log('not a concert')
+  //   } 
+  // }
 
   // const getSportsAPI = async() => {
   //   const response = await axios.get('http://localhost:8000/events')
@@ -30,33 +29,26 @@ function App() {
   //   }
   // }
 
-  useEffect(()=>{
-    getConcertsAPI()
-    // getSportsAPI()
-  },[])
-
 
   return (
     <div className="big-app">
 
-    <UserContext.Provider
+    {/* <UserContext.Provider
       value={{
         allConcerts,
         setAllConcerts,
-        concert,
-        setConcert,
-        allSports,
-        setAllSports,
-        // getSportsAPI,
-        sport,
-        setSport
+        // concert,
+        // setConcert,
+        // allSports,
+        // setAllSports,
+        // // getSportsAPI,
+        // sport,
+        // setSport
       }}
       >
         <AllConcerts />
         <Sports />
-    </UserContext.Provider>
-
-
+    </UserContext.Provider> */}
 
     <div className="app">
       <header>
@@ -70,7 +62,7 @@ function App() {
       </div>
     </div>
     // </div>
-  )
+  ) 
 }
 
 export default App
