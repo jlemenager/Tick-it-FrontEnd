@@ -24,19 +24,21 @@ const Concert = ({ allConcerts }) => {
 
     return (
         <div className='concert'>
-        <h1>Title:{concert.title}</h1>
-        <h2>Artist:{concert.artist}</h2>
-        <h3>Genre:{concert.genre}</h3>
-        <p>Performing on: {concert.date}</p>
-        <p>${concert.price}</p>
-        <p>Tickets: {concert.tickets}</p>
+            <div className='concdetail'>
+                <h1>Title:{concert.title}</h1>
+                <h2>Artist:{concert.artist}</h2>
+                <h3>Genre:{concert.genre}</h3>
+                <p>Performing on: {concert.date}</p>
+                <p>${concert.price}</p>
+                <p>Tickets: {concert.tickets}</p>
+            </div> 
         <div className='get-tickets'>
-        <button onClick={minus}>-</button>
-        <p>{buyTickets}</p>
-        <button onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
+            <button onClick={minus}>-</button>
+            <p>{buyTickets}</p>
+            <button onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
         </div>
-        <submit>Claim Tickets</submit>
-    </div> 
+            <submit>Claim Tickets</submit>
+        </div> 
     )
 }
 

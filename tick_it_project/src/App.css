@@ -12,7 +12,6 @@
   width: 100%;
   height: 100vh;
   margin: 0;
-  padding: 50px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +33,10 @@ body {
   text-align: center;
   font-family: heebo;
   color: #30a5b7;
+}
+.big-app{
+  width: 100%;
+  height: 100%;
 }
 
 .app{
@@ -70,9 +73,18 @@ header{
 /* MAIN */
 
 main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80vh
 }
-
+.main{
+  width: 100%;  
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* NAV */
 
 nav {
@@ -136,4 +148,8 @@ button:focus-visible {
 
 .concert, .sport{
   background-color: #22258D;
+}
+
+.concert{
+  width: 100%
 }
