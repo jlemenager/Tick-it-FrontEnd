@@ -15,7 +15,7 @@ export default function Main({allSports, setAllSports, allConcerts, setAllConcer
                 <Route path='/venues/:photo_url' element={<Venue allVenues={allVenues}/>}/>
                 {/* <Route path='/venues/:photo_url/:title' element={<Sport allSports={allSports}/>}/> */}
                 <Route path='/concerts' element={<AllConcerts allConcerts={allConcerts} setAllConcerts={setAllConcerts} />}/>
-                <Route path='/concert' element={<Concert allConcerts={allConcerts} />}/>
+                <Route path='/concerts/:title' element={<Concert allConcerts={allConcerts} />}/>
                 <Route path='/sports' element={<Sports allSports={allSports} setAllSports={setAllSports}/>}/>
                 <Route path='/sports/:title' element={<Sport allSports={allSports} />}/>
             </Routes>
