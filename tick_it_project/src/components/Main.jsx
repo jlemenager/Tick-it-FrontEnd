@@ -1,11 +1,12 @@
 import { Routes,Route } from 'react-router-dom'
 import Venues from './Venues'
 import AllConcerts from './Music/Concerts'
+import Concert from './Music/Concert'
 import Sports from './Sports/Sports'
 import Sport from './Sports/Sport'
 import Venue from './Venue'
 
-export default function Main({allSports, setAllSports, allVenues, setAllVenues}){
+export default function Main({allSports, setAllSports, allConcerts, setAllConcerts, allVenues, setAllVenues}){
     return(
         <div>
             <Routes>
@@ -13,7 +14,8 @@ export default function Main({allSports, setAllSports, allVenues, setAllVenues})
                 <Route path='/venues' element={<Venues allVenues={allVenues} setAllVenues={setAllVenues}/>}/>
                 <Route path='/venues/:photo_url' element={<Venue allVenues={allVenues}/>}/>
                 {/* <Route path='/venues/:photo_url/:title' element={<Sport allSports={allSports}/>}/> */}
-                <Route path='/concerts' element={<AllConcerts />}/>
+                <Route path='/concerts' element={<AllConcerts allConcerts={allConcerts} setAllConcerts={setAllConcerts} />}/>
+                <Route path='/concert' element={<Concert allConcerts={allConcerts} />}/>
                 <Route path='/sports' element={<Sports allSports={allSports} setAllSports={setAllSports}/>}/>
                 <Route path='/sports/:title' element={<Sport allSports={allSports} />}/>
             </Routes>
