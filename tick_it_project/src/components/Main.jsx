@@ -8,7 +8,7 @@ import Venue from './Venue'
 
 export default function Main({allSports, setAllSports, allConcerts, setAllConcerts, allVenues, setAllVenues}){
     return(
-        <div>
+        <div className='main'>
             <Routes>
                 {/* <Route path='/' element={<Main />}/> */}
                 <Route path='/venues' element={<Venues allVenues={allVenues} setAllVenues={setAllVenues}/>}/>
