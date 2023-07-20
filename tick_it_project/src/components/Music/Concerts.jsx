@@ -34,9 +34,6 @@ const AllConcerts = ({ allConcerts, setAllConcerts }) => {
                     <div key={key} onCLick={()=>pickConcert(concert.title)} className="concert">
                         <h2>{concert.title}</h2>
                         <h2>{concert.artist}</h2>
-                        {/* <h3>{concert.genre}</h3>
-                        <h3>Date: {concert.date}</h3>
-                        <h3>${concert.price}</h3> */}
                     </div>
                 ))
             }
