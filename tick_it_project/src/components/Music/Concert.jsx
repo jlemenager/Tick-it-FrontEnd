@@ -18,7 +18,7 @@ const Concert = ({ allConcerts }) => {
         <h1>{concert.title}</h1>
         <h2>{concert.artist}</h2>
         <h3>{concert.genre}</h3>
-        <p>Preforming on: {concert.date}</p>
+        <p>Performing on: {concert.date}</p>
         <p>${concert.price}</p>
     </div> 
     )

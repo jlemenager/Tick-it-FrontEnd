@@ -10,7 +10,6 @@ import './App.css'
 
 function App() {
   
-  
   const [allVenues, setAllVenues] = useState([])
   const [allSports, setAllSports] = useState([])
   const [allConcerts, setAllConcerts] = useState([])
@@ -43,7 +42,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <Main allSports={allSports} setAllSports={setAllSports} allVenues={allVenues} setAllVenues={setAllVenues}/>
+        <Main allConcerts={allConcerts} setAllConcerts={setAllConcerts} allSports={allSports} setAllSports={setAllSports} allVenues={allVenues} setAllVenues={setAllVenues}/>
       </main>
       <div>
         <Nav />
