@@ -13,6 +13,7 @@ function App() {
   
   const [allVenues, setAllVenues] = useState([])
   const [allSports, setAllSports] = useState([])
+  const [allConcerts, setAllConcerts] = useState([])
   const [concert, setConcert] = useState()
   const [sport, setSport] = useState()
 
@@ -35,22 +36,7 @@ function App() {
   return (
     <div className="big-app">
 
-    {/* <UserContext.Provider
-      value={{
-        allConcerts,
-        setAllConcerts,
-        // concert,
-        // setConcert,
-        // allSports,
-        // setAllSports,
-        // // getSportsAPI,
-        // sport,
-        // setSport
-      }}
-      >
-        <AllConcerts />
-        <Sports />
-    </UserContext.Provider> */}
+   
 
     <div className="app">
       <header>
