@@ -7,8 +7,7 @@ const AllConcerts = ({ allConcerts, setAllConcerts }) => {
     
     
     const getConcertsAPI = async() => {
-        const response = await axios.get('http://localhost:8000/events')
-        // https://tick-itapi-production.up.railway.app/events
+        const response = await axios.get('https://tick-itapi-production.up.railway.app/events')
         const concerts = []
         for (let i = 0; i<response.data.length;i++){
           response.data[i].is_concert ? concerts.push(response.data[i]) : console.log('not a concert')
@@ -33,8 +32,8 @@ const AllConcerts = ({ allConcerts, setAllConcerts }) => {
             {
                 allConcerts.map((concert,key) => (
                     <div key={key} onClick={()=>pickConcert(concert.title)} className="concert">
-                        <h2>{concert.title}</h2>
-                        <h2>{concert.artist}</h2>
+                        <h2>Title: {concert.title}</h2>
+                        <h2>Artist: {concert.artist}</h2>
                     </div>
                 ))
             }
