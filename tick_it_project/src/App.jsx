@@ -1,36 +1,60 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Nav from './components/Nav'
 import AllConcerts from './components/Music/Concerts'
+import Sports from './components/Sports/Sports'
 import UserContext from './UserContext'
+import axios from 'axios'
 import './App.css'
 
 function App() {
 
-  // const [allConcerts, setAllConcerts] = useState()
-  // const [concert, setConcert] = useState()
-  // const [allSports, setAllSports} = useState()
-  // const [sport, setSport] = useState()
+  const [allConcerts, setAllConcerts] = useState([])
+  const [concert, setConcert] = useState()
+  const [allSports, setAllSports] = useState([])
+  const [sport, setSport] = useState()
+
+  const getConcertsAPI = async() => {
+    const response = await axios.get('http://localhost:8000/events')
+    setAllConcerts(...allConcerts, response.data[0])
+    // for (let i = 0; i<response.data.length;i++){
+    //   response.data[i].is_concert ? setAllConcerts(...allConcerts, response.data[i]) : console.log('not a concert')
+    // } 
+  }
+
+  // const getSportsAPI = async() => {
+  //   const response = await axios.get('http://localhost:8000/events')
+  //   for (let i = 0; i<response.data.event.length;i++){
+  //     response.data[i].is_concert ? setAllSports(...allSports, response.data[i]) : console.log('not a sport')
+  //   }
+  // }
+
+  useEffect(()=>{
+    getConcertsAPI()
+    // getSportsAPI()
+  },[])
 
 
   return (
-    // <div className="big-app">
+    <div className="big-app">
 
-    // <UserContext.Provider
-    //   value={{
-    //       allConcerts,
-    //       setAllConcerts,
-            // concert,
-            // setConcert,
-            // allSports,
-            // setAllSports,
-            // sport,
-            // setSport
-    //   }}
-    //   >
-    //     <AllConcerts/>
-    // </UserContext.Provider>
+    <UserContext.Provider
+      value={{
+        allConcerts,
+        setAllConcerts,
+        concert,
+        setConcert,
+        allSports,
+        setAllSports,
+        // getSportsAPI,
+        sport,
+        setSport
+      }}
+      >
+        <AllConcerts />
+        <Sports />
+    </UserContext.Provider>
 
 
 

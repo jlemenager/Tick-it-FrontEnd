@@ -4,8 +4,7 @@ import axios from "axios"
 
 const AllConcerts = () => {
     
-    // const {allConcerts, setAllConcerts} = useContext(UserContext)
-
+    const {allConcerts, setAllConcerts} = useContext(UserContext)
     // useEffect(() => {
     //     const getConcerts = async() => {
     //         const response = await axios.get()
@@ -15,11 +14,15 @@ const AllConcerts = () => {
     //     getConcerts()
     // },[])
 
+    // useEffect(()=>{
+    //     getConcertsAPI()
+    //   },[])
+
     return (
         <div className="all-concerts">
             <h2>Concerts:</h2>
             {
-                concerts.map((concert,key) => (
+                allConcerts.map((concert,key) => (
                     <div key={key} className="concert-title">
                         <h3>{concert.title}</h3>
                     </div>
