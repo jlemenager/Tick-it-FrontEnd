@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import UserContext from '../../UserContext'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
-export default function Sports(){
+export default function Sports({ allSports, setAllSports }){
 
-    const [allSports, setAllSports] = useState([])
+    
     const getSportsAPI = async() => {
         const response = await axios.get('http://localhost:8000/events')
         const sports = []
@@ -17,11 +17,17 @@ export default function Sports(){
       useEffect(()=>{
         getSportsAPI()
       },[])
+
+    let navigate = useNavigate()
+    const showSport = (sport) => {
+        console.log(sport.id)
+        navigate(`${sport.title}`)
+    }
    
     return(
         <div className='event-list'>
             {allSports.map((sport,key)=>(
-                <div key={key} className='sport'>
+                <div key={key} onClick={()=>showSport(sport)} className='sport'>
                     <h2>{sport.title}</h2>
                     <h2>{sport.artist}</h2>
                     <h3>{sport.genre}</h3>
