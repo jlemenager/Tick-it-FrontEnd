@@ -11,10 +11,12 @@ import './App.css'
 function App() {
   
   const [allVenues, setAllVenues] = useState([])
+  const [oneVenue, setOneVenue] = useState([])
   const [allSports, setAllSports] = useState([])
   const [allConcerts, setAllConcerts] = useState([])
   const [concert, setConcert] = useState()
   const [sport, setSport] = useState()
+  const [tickets, setTickets] = useState(localStorage.getItem('tickets'))
 
   // const getConcertsAPI = async() => {
   //   const response = await axios.get('http://localhost:8000/events')
@@ -42,7 +44,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <Main allConcerts={allConcerts} setAllConcerts={setAllConcerts} allSports={allSports} setAllSports={setAllSports} allVenues={allVenues} setAllVenues={setAllVenues}/>
+        <Main allConcerts={allConcerts} setAllConcerts={setAllConcerts} allSports={allSports} setAllSports={setAllSports} allVenues={allVenues} setAllVenues={setAllVenues} oneVenue={oneVenue} setOneVenue={setOneVenue} tickets={tickets} setTickets={setTickets}/>
       </main>
       <div>
         <Nav />
