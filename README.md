@@ -20,7 +20,7 @@ Always be in the front row when you get your tickets through us! This is a full-
 [Linkedin](https://www.linkedin.com/in/lowell-caraballo-3415bb278/) | [GitHub](https://github.com/LowellC86)
 
 ### Vincent Vullo
-[Linkedin](link) | [GitHub](link)
+[Linkedin](https://www.linkedin.com/in/vincentvullo/) | [GitHub](https://github.com/vinceoct)
 
 ### Jeremy LeManager
 [Linkedin](https://www.linkedin.com/in/jeremy-lemenager-dev/) | [GitHub](https://github.com/jlemenager)
