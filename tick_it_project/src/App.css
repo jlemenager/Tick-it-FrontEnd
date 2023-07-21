@@ -94,6 +94,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 5px #000;
+  font-family: PT Sans Narrow;
 }
 
 
@@ -132,7 +133,7 @@ button {
   width:100%;
 }
 
-.concert, .sport, .venuedetails {
+.concert, .sportPage, .sport, .venuedetails {
   background: linear-gradient(135deg, rgba(18, 174, 226, 0.291), rgba(255, 254, 254, 0));
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px); 
@@ -154,21 +155,21 @@ button {
 .venuedetails img{
   margin: 15px;
 }
- .concertl, .venue{
+ .concertl, .venue, .sports{
     background: linear-gradient(135deg, rgba(18, 174, 226, 0.291), rgba(255, 254, 254, 0));
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     color: #30a5b7;
     font-family: PT Sans Narrow;
     width: 65%;
-    margin: 10;
+    margin: 15px;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 4px 4px 26px #07091c,
         -4px -4px 26px #2b2e51;
 }
 
-.concdetail{
+.concdetail, .sportdetail{
   width: 30%;
   margin: 0 auto; 
   display: flex; 
@@ -208,7 +209,19 @@ button {
   width: 60px;
   
 }
-
+.claimbtn{
+  width: 150px;
+  margin: 0 auto;
+  color: #30a5b7;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 2px;
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: rgba(27, 27, 27, 0.65);
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
 .tixbtn:hover {
   border-color: #30a5b7;
 }
