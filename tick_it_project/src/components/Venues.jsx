@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const AllVenues = ({allVenues, setAllVenues}) => {
     
     const getVenuesAPI = async() => {
-        const response = await axios.get('http://localhost:8000/venues')
+        const response = await axios.get('https://tick-itapi-production.up.railway.app/venues')
         setAllVenues(response.data)
       }
 
@@ -14,17 +14,17 @@ const AllVenues = ({allVenues, setAllVenues}) => {
       },[])
 
     let navigate = useNavigate()
-    const showVenue = (venue) => {
-        navigate(`${venue.venue}`)
+    const showVenue = (name) => {
+        navigate(`${name}`)
     }
 
     return allVenues ? (
         <div className="event-list">
             {
                 allVenues.map((venue,key) => (
-                    <div key={key} onClick={()=>showVenue(venue)} className="concert">
-                        <img src={venue.photo_url} />
-                        <h2>Location Name Here</h2>
+                    <div key={key} onClick={()=>showVenue(venue.name)} className="venue">
+                        <h2>{venue.name}</h2>
+                        <h2>{venue.address}</h2>
                     </div>
                 ))
             }

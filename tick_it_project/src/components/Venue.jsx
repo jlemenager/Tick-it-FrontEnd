@@ -1,37 +1,32 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate,useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 
 export default function Venue({ allVenues }){
 
-    const [oneVenue, setOneVenue] = useState('')
+    const [venue, setVenue] = useState('')
 
-    let { venue } = useParams()
+    let { name } = useParams()
     
-    useEffect(()=>{
-       let selectedVenue = allVenues.find(venue=>oneVenue.venue == venue)
-       setOneVenue(selectedVenue)
-    },[oneVenue.venue, venue])
+console.log(allVenues)
 
-    let navigate = useNavigate()
-    const showEvent = (event) => {
-        navigate(`${event.title}`)
-    }
-    return(
+    useEffect(()=>{
+       let selectedVenue = allVenues.find(venue=>venue.name == name)
+       console.log(selectedVenue)
+       setVenue(selectedVenue)
+       console.log(venue)
+    },[venue.name, name])
+
+    
+    return Venue ? (
         <div className='venuePage'>
-            {
-            venue.map((event, key) =>(
-                <div key={key} onClick={()=>showEvent(event)}>
-                <h1>{event.title}</h1>
-                <h2>{event.artist}</h2>
-                {/* <h3>{event.venue}</h3> */}
-                {/* <img src={event.image_url} alt="event image" /> */}
-                <p>{event.date}</p>
-                <p>{event.price}</p>  
+                <div className='venuedetails'>
+                <h1>{venue.name}</h1>
+                <h2>{venue.address}</h2>
+                <h3>{venue.description}</h3>
+                <img src={venue.photo_url} style={{width: '300px'}} alt="venue image" />
                 </div>
-            )
-            )}
         </div>
-    )
+    ) : console.log('Venue is not defined')
 }
