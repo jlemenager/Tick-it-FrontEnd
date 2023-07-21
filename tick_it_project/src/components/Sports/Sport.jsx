@@ -25,7 +25,9 @@ export default function Sport({ allSports, tickets, setTickets }){
 
     const handleSubmit = async() => {
         setTickets(tickets - personalTickets)
+        console.log('working')
         const response = await axios.get(`https://tick-itapi-production.up.railway.app/events/`)
+                console.log('working2')
                 const response2 = await axios.put(`https://tick-itapi-production.up.railway.app/events/${sport.id}`, {...sport, tickets: sport.tickets - personalTickets})
                 console.log(response2)  
         }
