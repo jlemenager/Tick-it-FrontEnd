@@ -239,3 +239,8 @@ button {
   background: #30a5b7;
 }
 
+.frontPageH1{
+  display: block;
+  font-weight: 900;
+}
+
