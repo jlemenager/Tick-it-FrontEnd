@@ -33,17 +33,9 @@ const Concert = ({ allConcerts,tickets,setTickets }) => {
     return (
         <div className='concert'>
             <div className='concdetail'>
-                <h1>Title:{concert.title}</h1>
-                <h2>Artist:{concert.artist}</h2>
-                <h3>Genre:{concert.genre}</h3>
-                <p>Performing on: {concert.date}</p>
-                <p>${concert.price}</p>
-                <p>Tickets: {concert.tickets - buyTickets}</p>
-            </div> 
-        <div className='get-tickets'>
-            <button onClick={decreaseBuyTickets}>-</button>
+
             <p>{buyTickets}</p>
-            <button onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
+            <button className='tixbtn' onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
         </div>
             <submit onClick={handleSubmit}>Claim Tickets</submit>
         </div> 

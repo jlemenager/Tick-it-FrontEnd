@@ -31,7 +31,7 @@ const AllConcerts = ({ allConcerts, setAllConcerts }) => {
             {/* <h2>Concerts:</h2> */}
             {
                 allConcerts.map((concert,key) => (
-                    <div key={key} onClick={()=>pickConcert(concert.title)} className="concert">
+                    <div key={key} onClick={()=>pickConcert(concert.title)} className="concertl">
                         <h2>Title: {concert.title}</h2>
                         <h2>Artist: {concert.artist}</h2>
                     </div>
