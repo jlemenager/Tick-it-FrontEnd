@@ -19,11 +19,11 @@ const AllVenues = ({allVenues, setAllVenues}) => {
     }
 
     return allVenues ? (
-        <div className="venue-list">
+        <div className="event-list">
             {
                 allVenues.map((venue,key) => (
                     <div key={key} onClick={()=>showVenue(venue.name)} className="venue">
-                        <h1>{venue.name}</h1>
+                        <h2>{venue.name}</h2>
                         <h2>{venue.address}</h2>
                     </div>
                 ))
