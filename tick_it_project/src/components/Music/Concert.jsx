@@ -2,13 +2,13 @@ import { useEffect, useState, useContext } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 
-const Concert = ({ allConcerts }) => {
+const Concert = ({ allConcerts,tickets,setTickets }) => {
 
     const [concert, setConcert] = useState('')
     const [buyTickets, setBuyTickets] = useState(0)
 
-    const minus = () => {
-        if(buyTickets <= 0) {
+    const decreaseBuyTickets = () => {
+        if (buyTickets <= 0){
             return
         } else {
             setBuyTickets(buyTickets - 1)
@@ -22,6 +22,14 @@ const Concert = ({ allConcerts }) => {
             setConcert(selectedConcert)
         },[concert.title, title])
 
+    const handleSubmit = async() => {
+        setTickets(tickets - buyTickets)
+        const response = await axios.get(`https://tick-itapi-production.up.railway.app/events/`)
+                const response2 = await axios.put(`https://tick-itapi-production.up.railway.app/events/${concert.id}`, {...concert, tickets: concert.tickets - buyTickets})
+                console.log(response2)  
+        }
+        localStorage.setItem('tickets', tickets - buyTickets)
+
     return (
         <div className='concert'>
             <div className='concdetail'>
@@ -30,14 +38,14 @@ const Concert = ({ allConcerts }) => {
                 <h3>Genre:{concert.genre}</h3>
                 <p>Performing on: {concert.date}</p>
                 <p>${concert.price}</p>
-                <p>Tickets: {concert.tickets}</p>
+                <p>Tickets: {concert.tickets - buyTickets}</p>
             </div> 
         <div className='get-tickets'>
-            <button onClick={minus}>-</button>
+            <button onClick={decreaseBuyTickets}>-</button>
             <p>{buyTickets}</p>
             <button onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
         </div>
-            <submit>Claim Tickets</submit>
+            <submit onClick={handleSubmit}>Claim Tickets</submit>
         </div> 
     )
 }

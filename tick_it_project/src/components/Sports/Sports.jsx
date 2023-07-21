@@ -2,16 +2,20 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-export default function Sports({ allSports, setAllSports }){
+export default function Sports({ allSports, setAllSports, setTickets }){
 
-    
     const getSportsAPI = async() => {
-        const response = await axios.get('http://localhost:8000/events')
+        const response = await axios.get('https://tick-itapi-production.up.railway.app/events/')
+        // http://localhost:8000/events
         const sports = []
         for (let i = 0; i<response.data.length;i++){
-          response.data[i].is_sports_event ? sports.push(response.data[i]) : console.log('not a sport')
+          if(response.data[i].is_sports_event){
+            sports.push(response.data[i])
+            setTickets(response.data[i].tickets)
+          } 
         } 
         setAllSports(sports)
+        
       }
 
       useEffect(()=>{
