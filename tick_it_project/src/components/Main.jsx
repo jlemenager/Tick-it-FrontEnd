@@ -5,12 +5,13 @@ import Concert from './Music/Concert'
 import Sports from './Sports/Sports'
 import Sport from './Sports/Sport'
 import Venue from './Venue'
+import Home from './Home'
 
 export default function Main({allSports, setAllSports, allConcerts, setAllConcerts, allVenues, setAllVenues, tickets, setTickets}){
     return(
         <div className='main'>
             <Routes>
-                {/* <Route path='/' element={<Main />}/> */}
+                <Route path='/' element={<Home />}/>
                 <Route path='/venues' element={<Venues allVenues={allVenues} setAllVenues={setAllVenues}/>}/>
                 <Route path='/venues/:name' element={<Venue allVenues={allVenues}/>}/>
                 {/* <Route path='/venues/:photo_url/:title' element={<Sport allSports={allSports}/>}/> */}
