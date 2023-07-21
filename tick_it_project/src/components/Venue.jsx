@@ -21,12 +21,11 @@ console.log(allVenues)
     
     return Venue ? (
         <div className='venuePage'>
-                <div>
+                <div className='venuedetails'>
                 <h1>{venue.name}</h1>
                 <h2>{venue.address}</h2>
                 <h3>{venue.description}</h3>
-                <img src={venue.photo_url} alt="venue image" />
-                <p>{venue.venue_url}</p> 
+                <img src={venue.photo_url} style={{width: '300px'}} alt="venue image" />
                 </div>
         </div>
     ) : console.log('Venue is not defined')
