@@ -36,18 +36,20 @@ export default function Sport({ allSports, tickets, setTickets }){
     // setTickets()
     return(
         <div className='sportPage'>
+            <div className='sportdetail'>
             <h1>{sport.title}</h1>
-            <h2>{sport.artist}</h2>
-            {/* <h3>{sport.venue}</h3> */}
-            {/* <img src={sport.image_url} alt="sport image" /> */}
-            <p>{sport.date}</p>
-            <p>{sport.price}</p>
-            <p>{sport.tickets - personalTickets}</p>
-            <h2>Claim Tickets</h2>
-            <button onClick={()=>setPersonalTickets(personalTickets=>personalTickets + 1)}>+</button>
-            <p className='personal-tickets'>{personalTickets}</p>
-            <button onClick={decreasePersonalTickets}>-</button>
-            <button onClick={handleSubmit}>Claim Tickets</button>
+            <p>Playing on {sport.date}</p>
+        <div className='tixprice'>          
+            <p>${sport.price}</p>
+            <p>{sport.tickets - personalTickets} tickets left</p>
+        </div>  
+        </div>
+        <div className='gettix'>
+            <button className='tixbtn' onClick={decreasePersonalTickets}>-</button>
+            <p>{personalTickets}</p>
+            <button className='tixbtn' onClick={()=>setPersonalTickets(personalTickets=>personalTickets + 1)}>+</button>
+        </div>   
+            <button className='claimbtn' onClick={handleSubmit}>Claim Tickets</button>
         </div>
     )
 }

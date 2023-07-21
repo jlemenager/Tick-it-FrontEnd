@@ -54,7 +54,7 @@ const Concert = ({ allConcerts,tickets,setTickets }) => {
             <button className='tixbtn' onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
             
         </div>
-            <button onClick={handleSubmit}>Claim Tickets</button>
+            <button className='claimbtn' onClick={handleSubmit}>Claim Tickets</button>
         </div> 
     )
 }

@@ -31,9 +31,8 @@ export default function Sports({ allSports, setAllSports, tickets, setTickets })
     return(
         <div className='event-list'>
             {allSports.map((sport,key)=>(
-                <div key={key} onClick={()=>showSport(sport)} className='sport'>
+                <div key={key} onClick={()=>showSport(sport)} className='sports'>
                     <h2>{sport.title}</h2>
-                    <h2>{sport.artist}</h2>
                     <h3>{sport.genre}</h3>
                     <h5>Date: {sport.date}</h5>
                     <p>${sport.price}</p>
