@@ -11,6 +11,8 @@ Always be in the front row when you get your tickets through us! This is a full-
 
 ## Planning
 
+![Figma](tick_it_project/src/images/Figma.png)
+![CHD](tick_it_project/src/images/CHD.png)
 
 ## Contributions
 
