@@ -213,16 +213,16 @@ button {
   border-color: #30a5b7;
 }
 
-.info::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 
-.info::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #717171;
   border-radius: 10px;
 }
 
-.info::-webkit-scrollbar-thumb:hover {
-  background: #7d91e3;
+::-webkit-scrollbar-thumb:hover {
+  background: #30a5b7;
 }
 

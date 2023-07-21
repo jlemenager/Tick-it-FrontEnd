@@ -33,16 +33,28 @@ const Concert = ({ allConcerts,tickets,setTickets }) => {
     return (
         <div className='concert'>
             <div className='concdetail'>
-            <h3>Tour: {concert.title}</h3>
-            <h3>Artist: {concert.artist}</h3>
-            <h3>Genre:{concert.genre}</h3>
-            <p>Performing on: {concert.date}</p>
-            <p>${concert.price}</p>
-            <p>Tickets: {concert.tickets - buyTickets}</p>
-            <button className='tixbtn' onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
+            <h1>{concert.title}</h1>
+                <div id='artist'>
+                    <h3>Artist:</h3> <h3>{concert.artist}</h3>
+                </div>
+                <div id='genre'>
+                    <h3>Genre:</h3> <h3>{concert.genre}</h3>
+                </div>
+                <div id='cdate'>
+                    <p>Performing on:</p> <p>{concert.date}</p>
+                </div>
+                <div className='tixprice'>
+                    <p>${concert.price}</p>
+                    <p><span className='tixquant'>{concert.tickets}</span> tickets left</p>
+                </div>
+            </div>
+            <div className='gettix'>
             <button className='tixbtn' onClick={decreaseBuyTickets}>-</button>
+            <p>{buyTickets}</p>
+            <button className='tixbtn' onClick={() => setBuyTickets((buyTickets) => buyTickets + 1)}>+</button>
+            
         </div>
-            <submit onClick={handleSubmit}>Claim Tickets</submit>
+            <submit>Claim Tickets</submit>
         </div> 
     )
 }
