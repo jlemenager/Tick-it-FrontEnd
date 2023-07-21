@@ -45,7 +45,7 @@ const Concert = ({ allConcerts,tickets,setTickets }) => {
                 </div>
                 <div className='tixprice'>
                     <p>${concert.price}</p>
-                    <p><span className='tixquant'>{concert.tickets}</span> tickets left</p>
+                    <p><span className='tixquant'>{concert.tickets - buyTickets}</span> tickets left</p>
                 </div>
             </div>
             <div className='gettix'>
